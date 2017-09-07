@@ -42,7 +42,7 @@ def clear():
 
 @app.route('/submitcrime', methods=['post'])
 def submitcrime():
-    category = request.form.get('cat')
+    category = request.form.get('category')
     date = request.form.get('date')
     latitude = request.form.get('latitude')
     longitude = request.form.get('longitude')
