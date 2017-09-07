@@ -15,11 +15,8 @@ DB = DBHelper()
 
 @app.route("/")
 def home():
-    try:
-        crimes_dict = DB.get_all_crimes()
-    except Exception as e:
-        print(e)
-    crimes = json.dumps(crimes_dict)
+    crimes = DB.get_all_crimes()
+    crimes = json.dumps(crimes)
     return render_template("home.html", crimes=crimes)
 
 
