@@ -60,7 +60,7 @@ class DBHelper:
     def get_all_crimes(self):
         connection = self.connect()
         try:
-            query = 'SELECT (latitude, longitude, date, category, description) FROM CRIMES;'
+            query = 'SELECT (latitude, longitude, date, category, description) FROM crimes;'
             with connection.cursor() as cursor:
                 cursor.execute(query)
             named_crimes = []
